@@ -1,0 +1,20 @@
+﻿@font-face {
+    font-family: 'Ubuntu';
+    src: url('../Font/Ubuntu-Medium.woff2') format('woff2'), url('../Font/Ubuntu-Medium.woff') format('woff'), url('../Font/Ubuntu-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #0f172a;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.inputLabel {
+    font-size: .8rem;
+    font-weight: 400;
+    filter: brightness(.9);
+}

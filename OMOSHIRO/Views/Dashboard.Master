@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.Master.cs" Inherits="OMOSHIRO.Views.Site1" %>
+<%@ Register Src="~/Views/Dashboard/UC/TopBar.ascx" TagPrefix="component" TagName="TopBar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link href="../Src/Style/Styling.css" rel="stylesheet" type="text/css" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="relative w-full h-full flex items-center justify-center">
+            
+            <component:TopBar runat="server" ID="TopBar" />
+
+            <div class="w-full h-full">
+                <asp:ContentPlaceHolder ID="DashboardPlaceholder" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        
+        </div>
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="~/Src/Script/tailwind.js" />
+            </Scripts>
+        </asp:ScriptManager>
+    </form>
+</body>
+</html>

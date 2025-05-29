@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Auth.master.cs" Inherits="OMOSHIRO.Views.Auth" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link href="../Src/Style/Styling.css" rel="stylesheet" type="text/css" runat="server" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="w-screen h-screen flex items-center justify-center">
+            <div class="w-full absolute top-0 z-0">
+                <div class="w-full aspect-[1919/617] bg-linear-to-t from-slate-900 to-white/0 absolute top-0"></div>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Public/auth_bg.png" CssClass="w-full" />
+            </div>
+        
+            <div class="w-full h-full relative z-10 flex flex-col">
+                <div class="h-[33vh] pb-5 flex items-end justify-center">
+                    <div class="relative w-[200px] h-[200px] flex items-center justify-center">
+                        <div class="absolute w-[200px] h-[200px] z-0 bg-purple-900 rounded-full blur-[40px]"></div>
+                        <asp:Image ID="Image2" ImageUrl="~/Public/logo.png" CssClass="w-[150px] h-[150px] relative z-10" runat="server" />
+                    </div>
+                </div>
+
+                <div class="h-[33vh] mx-auto px-10 py-6 w-[450px] h-fit rounded-lg bg-slate-700/50 border-slate-600 backdrop-blur-md">
+                    <asp:ContentPlaceHolder ID="AuthPlaceholder" runat="server"></asp:ContentPlaceHolder>
+                </div>
+
+                <div class="h-[33vh] pb-5 flex items-end justify-center">
+                    <p class="inputLabel text-slate-400">Copyright Omoshiro 2025</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="~/Src/Script/tailwind.js" />
+            </Scripts>
+        </asp:ScriptManager>
+    </form>
+</body>
+</html>

@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\harrazmasri\\source\\repos\\OMOSHIRO\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A5CCDF94-16BE-4C23-B22A-AFFD374A1109}|OMOSHIRO\\OMOSHIRO.csproj|c:\\users\\harrazmasri\\source\\repos\\omoshiro\\omoshiro\\views\\dashboard\\category.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A5CCDF94-16BE-4C23-B22A-AFFD374A1109}|OMOSHIRO\\OMOSHIRO.csproj|solutionrelative:omoshiro\\views\\dashboard\\category.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5CCDF94-16BE-4C23-B22A-AFFD374A1109}|OMOSHIRO\\OMOSHIRO.csproj|C:\\Users\\harrazmasri\\source\\repos\\OMOSHIRO\\omoshiro\\views\\dashboard.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{A5CCDF94-16BE-4C23-B22A-AFFD374A1109}|OMOSHIRO\\OMOSHIRO.csproj|solutionrelative:omoshiro\\views\\dashboard.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5CCDF94-16BE-4C23-B22A-AFFD374A1109}|OMOSHIRO\\OMOSHIRO.csproj|C:\\Users\\harrazmasri\\source\\repos\\OMOSHIRO\\omoshiro\\src\\style\\styling.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A5CCDF94-16BE-4C23-B22A-AFFD374A1109}|OMOSHIRO\\OMOSHIRO.csproj|solutionrelative:omoshiro\\src\\style\\styling.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 241,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Styling.css",
+              "DocumentMoniker": "C:\\Users\\harrazmasri\\source\\repos\\OMOSHIRO\\OMOSHIRO\\Src\\Style\\Styling.css",
+              "RelativeDocumentMoniker": "OMOSHIRO\\Src\\Style\\Styling.css",
+              "ToolTip": "C:\\Users\\harrazmasri\\source\\repos\\OMOSHIRO\\OMOSHIRO\\Src\\Style\\Styling.css",
+              "RelativeToolTip": "OMOSHIRO\\Src\\Style\\Styling.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-28T01:39:38.442Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Category.aspx",
+              "DocumentMoniker": "C:\\Users\\harrazmasri\\source\\repos\\OMOSHIRO\\OMOSHIRO\\Views\\Dashboard\\Category.aspx",
+              "RelativeDocumentMoniker": "OMOSHIRO\\Views\\Dashboard\\Category.aspx",
+              "ToolTip": "C:\\Users\\harrazmasri\\source\\repos\\OMOSHIRO\\OMOSHIRO\\Views\\Dashboard\\Category.aspx",
+              "RelativeToolTip": "OMOSHIRO\\Views\\Dashboard\\Category.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-29T06:40:47.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dashboard.Master",
+              "DocumentMoniker": "C:\\Users\\harrazmasri\\source\\repos\\OMOSHIRO\\OMOSHIRO\\Views\\Dashboard.Master",
+              "RelativeDocumentMoniker": "OMOSHIRO\\Views\\Dashboard.Master",
+              "ToolTip": "C:\\Users\\harrazmasri\\source\\repos\\OMOSHIRO\\OMOSHIRO\\Views\\Dashboard.Master",
+              "RelativeToolTip": "OMOSHIRO\\Views\\Dashboard.Master",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-28T01:21:24.667Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
