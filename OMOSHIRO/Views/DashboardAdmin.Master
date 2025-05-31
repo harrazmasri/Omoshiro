@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DasgboardAdmin.master.cs" Inherits="OMOSHIRO.DasgboardAdmin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DashboardAdmin.Master.cs" Inherits="OMOSHIRO.DasgboardAdmin" %>
 
 <!DOCTYPE html>
 
