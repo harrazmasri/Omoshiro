@@ -5,19 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace OMOSHIRO.Views.Dashboard
+namespace OMOSHIRO.Views.Dashboard.UC
 {
-	public partial class Category : System.Web.UI.Page
+	public partial class ProfileInventory : System.Web.UI.UserControl
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
 
 		}
-
-		public void Genre_Click(object sender, EventArgs e)
-		{
-			//
-		}
-
-    }
+	}
 }

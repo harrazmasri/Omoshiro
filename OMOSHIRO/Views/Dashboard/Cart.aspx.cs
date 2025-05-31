@@ -7,17 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace OMOSHIRO.Views.Dashboard
 {
-	public partial class Category : System.Web.UI.Page
+	public partial class Cart : System.Web.UI.Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
 
 		}
-
-		public void Genre_Click(object sender, EventArgs e)
-		{
-			//
-		}
-
-    }
+	}
 }
