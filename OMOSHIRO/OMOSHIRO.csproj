@@ -167,11 +167,11 @@
     <Compile Include="Views\Admin\AdminLogIn.aspx.designer.cs">
       <DependentUpon>AdminLogIn.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\DasgboardAdmin.Master.cs">
-      <DependentUpon>DasgboardAdmin.Master</DependentUpon>
+    <Compile Include="Views\DashboardAdmin.Master.cs">
+      <DependentUpon>DashboardAdmin.Master</DependentUpon>
     </Compile>
-    <Compile Include="Views\DasgboardAdmin.Master.designer.cs">
-      <DependentUpon>DasgboardAdmin.Master</DependentUpon>
+    <Compile Include="Views\DashboardAdmin.Master.designer.cs">
+      <DependentUpon>DashboardAdmin.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Admin.Master.cs">
@@ -301,7 +301,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\DasgboardAdmin.Master" />
+    <Content Include="Views\DashboardAdmin.Master" />
     <None Include="packages.config" />
     <Content Include="Views\Dashboard.Master" />
     <Content Include="Views\Auth.Master" />
