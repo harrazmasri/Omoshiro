@@ -11,16 +11,25 @@ namespace OMOSHIRO.Views.Dashboard
 {
 
 
-    public partial class Category
+    public partial class Cart
     {
 
         /// <summary>
-        /// CategoryGrid control.
+        /// CartList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OMOSHIRO.Views.Dashboard.UC.CategoryGrid CategoryGrid;
+        protected global::OMOSHIRO.Views.Dashboard.UC.CartList CartList;
+
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

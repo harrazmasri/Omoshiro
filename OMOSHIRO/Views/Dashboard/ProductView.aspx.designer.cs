@@ -11,16 +11,16 @@ namespace OMOSHIRO.Views.Dashboard
 {
 
 
-    public partial class Category
+    public partial class ProductView
     {
 
         /// <summary>
-        /// CategoryGrid control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OMOSHIRO.Views.Dashboard.UC.CategoryGrid CategoryGrid;
+        protected global::System.Web.UI.WebControls.Image Image1;
     }
 }

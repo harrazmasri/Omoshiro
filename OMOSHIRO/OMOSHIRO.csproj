@@ -75,6 +75,7 @@
     <Content Include="Public\Icon\log-out.svg" />
     <Content Include="Public\Icon\shopping-cart.svg" />
     <Content Include="Public\Icon\user.svg" />
+    <Content Include="Public\Icon\x.svg" />
     <Content Include="Public\logo.png" />
     <Content Include="Public\auth_bg.png" />
     <Content Include="Public\logoMascot.png" />
@@ -136,12 +137,21 @@
     <Content Include="Public\TestProducts\header_alt_assets_3.jpg" />
     <Content Include="Public\TestProducts\header_alt_assets_4.jpg" />
     <Content Include="Public\TestProducts\header_alt_assets_6.jpg" />
+    <Content Include="Public\TestProducts\test_preview\1.jpg" />
+    <Content Include="Public\TestProducts\test_preview\2.jpg" />
+    <Content Include="Public\TestProducts\test_preview\3.jpg" />
     <Content Include="Src\Script\tailwind.js" />
     <Content Include="Src\Style\Styling.css" />
     <Content Include="Views\Authentication\Login.aspx" />
     <Content Include="Views\Authentication\Register.aspx" />
+    <Content Include="Views\Dashboard\Cart.aspx" />
     <Content Include="Views\Dashboard\Category.aspx" />
+    <Content Include="Views\Dashboard\ProductView.aspx" />
+    <Content Include="Views\Dashboard\Profile.aspx" />
     <Content Include="Views\Dashboard\Store.aspx" />
+    <Content Include="Views\Dashboard\UC\CartList.ascx" />
+    <Content Include="Views\Dashboard\UC\ProfileInventory.ascx" />
+    <Content Include="Views\Dashboard\UC\CategoryGrid.ascx" />
     <Content Include="Views\Dashboard\UC\Featured.ascx" />
     <Content Include="Views\Dashboard\UC\GridLayout.ascx" />
     <Content Include="Views\Dashboard\UC\RackLayout.ascx" />
@@ -198,6 +208,13 @@
     <Compile Include="Views\Dashboard.Master.designer.cs">
       <DependentUpon>Dashboard.Master</DependentUpon>
     </Compile>
+    <Compile Include="Views\Dashboard\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dashboard\Category.aspx.cs">
       <DependentUpon>Category.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -205,12 +222,47 @@
     <Compile Include="Views\Dashboard\Category.aspx.designer.cs">
       <DependentUpon>Category.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Dashboard\ProductView.aspx.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\ProductView.aspx.designer.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dashboard\Store.aspx.cs">
       <DependentUpon>Store.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Dashboard\Store.aspx.designer.cs">
       <DependentUpon>Store.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\CartList.ascx.cs">
+      <DependentUpon>CartList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\CartList.ascx.designer.cs">
+      <DependentUpon>CartList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\ProfileInventory.ascx.cs">
+      <DependentUpon>ProfileInventory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\ProfileInventory.ascx.designer.cs">
+      <DependentUpon>ProfileInventory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\CategoryGrid.ascx.cs">
+      <DependentUpon>CategoryGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\CategoryGrid.ascx.designer.cs">
+      <DependentUpon>CategoryGrid.ascx</DependentUpon>
     </Compile>
     <Compile Include="Views\Dashboard\UC\Featured.ascx.cs">
       <DependentUpon>Featured.ascx</DependentUpon>
@@ -262,11 +314,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Public\Products\" />
     <Folder Include="Src\Font\" />
-    <Folder Include="Views\Cart\" />
-    <Folder Include="Views\Product\" />
-    <Folder Include="Views\Profile\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
