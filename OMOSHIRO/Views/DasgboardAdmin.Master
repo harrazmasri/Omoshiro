@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DasgboardAdmin.master.cs" Inherits="OMOSHIRO.DasgboardAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link href="../Src/Style/Styling.css" rel="stylesheet" type="text/css" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="w-full h-full flex gap-5"> 
+            <div class="bg-slate-800 w-[200px] h-screen flex flex-col items-start p-4 " >
+                  <asp:Image ID="Image2" ImageUrl="~/Public/logoMascot.png" CssClass="w-[80px] h-[80px] mx-auto relative z-10 mb-5" runat="server" />
+               <div class="flex gap-2 items-center mb-3" >
+                   <asp:Image ID="Image1" ImageUrl="~/Public/Icon/trello.svg" CssClass="w-[14px] h-[14px] relative z-10 invert" runat="server" />
+                   <asp:HyperLink ID="HyperLink1" runat="server">Dashboard</asp:HyperLink>
+               </div>
+                <div class="flex gap-2 items-center mb-3">
+                    <asp:Image ID="Image3" ImageUrl="~/Public/Icon/lucide--gamepad-2.svg" CssClass="w-[14px] h-[14px] relative z-10 invert" runat="server" />
+                    <asp:HyperLink ID="HyperLink2" runat="server">Product</asp:HyperLink>
+                </div>
+                <div class="flex gap-2 items-center mb-3">
+                    <asp:Image ID="Image4" ImageUrl="~/Public/Icon/log-out.svg" CssClass="w-[14px] h-[14px] relative z-10 invert" runat="server" />
+                    <asp:HyperLink ID="HyperLink3" runat="server">Log Out</asp:HyperLink>   
+                </div>            
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+    <Scripts>
+        <asp:ScriptReference Path="~/Src/Script/tailwind.js" />
+    </Scripts>
+</asp:ScriptManager>
+    </form>
+
+</body>
+</html>
+
+
+
