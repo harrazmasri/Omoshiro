@@ -7,36 +7,39 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="DashboardPlaceholder" runat="server">
     <div class="relative w-full h-fit px-[7rem] mb-7 mt-[70px] py-6">
         
-        <div class="w-full flex items-start gap-5">
+        <div class="w-[800px] mx-auto flex flex-col items-start gap-5">
             
-            <div class="w-1/3 flex flex-col gap-3">
+            <div class="w-full flex flex-col gap-3">
                 <h1 class="text-3xl mb-5">Battlefield 1</h1>
                 <div class="w-full overflow-clip rounded-[10px]">
-                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Public/Banner/banner1.jpg" CssClass="w-full object-cover" />
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Public/TestProducts/header (45).jpg" CssClass="w-full object-cover" />
                 </div>
 
                 <div class="w-full">
-                    <asp:Label class="bg-purple-900 w-fit rounded py-1 px-2 text-sm font-400">war</asp:Label>
-                    <asp:Label class="bg-purple-900 w-fit rounded py-1 px-2 text-sm font-400">rpg</asp:Label>
-                    <asp:Label class="bg-purple-900 w-fit rounded py-1 px-2 text-sm font-400">firt-person-shooter</asp:Label>
-                    <asp:Label class="bg-purple-900 w-fit rounded py-1 px-2 text-sm font-400">action</asp:Label>
-                    <asp:Label class="bg-purple-900 w-fit rounded py-1 px-2 text-sm font-400">thriller</asp:Label>
+                    <asp:Label class="bg-gray-800 w-fit rounded py-1 px-2 text-sm font-400">war</asp:Label>
+                    <asp:Label class="bg-gray-800 w-fit rounded py-1 px-2 text-sm font-400">rpg</asp:Label>
+                    <asp:Label class="bg-gray-800 w-fit rounded py-1 px-2 text-sm font-400">firt-person-shooter</asp:Label>
+                    <asp:Label class="bg-gray-800 w-fit rounded py-1 px-2 text-sm font-400">action</asp:Label>
+                    <asp:Label class="bg-gray-800 w-fit rounded py-1 px-2 text-sm font-400">thriller</asp:Label>
                 </div>
 
-                <div class="bg-purple-800 w-fit text-white hover:brightness-75 rounded py-2 px-4">
-                    <asp:Image CssClass="invert w-[14px]" ImageURL="~/Public/Icon/shopping-cart.svg" runat="server"></asp:Image>
-                    <p>Add To Cart</p>
+                <div class="w-full flex justify-between items-end">
+                    <p>RM<span class="text-2xl">192.32</span><p>
+                    <div class="bg-purple-800 flex items-center gap-3 w-fit text-white hover:brightness-75 rounded py-2 px-4">
+                        <asp:Image CssClass="invert w-[14px]" ImageURL="~/Public/Icon/shopping-cart.svg" runat="server"></asp:Image>
+                        <p>Add To Cart</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="w-2/3">
-                <div class="w-[300px] mb-5">
+            <div class="w-full">
+                <div class="w-full mb-5">
                     <h4 class="mb-3 text-xl">Gallery</h4>
 
-                    <div class="flex gap-3">
-                        <asp:Image CssClass="rounded-[10px]" ImageURL="~/Public/TestProducts/test_preview/1.jpg" runat="server"></asp:Image>
-                        <asp:Image CssClass="rounded-[10px]" ImageURL="~/Public/TestProducts/test_preview/2.jpg" runat="server"></asp:Image>
-                        <asp:Image CssClass="rounded-[10px]" ImageURL="~/Public/TestProducts/test_preview/3.jpg" runat="server"></asp:Image>
+                    <div class="flex w-full rounded-[10px] overflow-clip">
+                        <asp:Image CssClass="w-1/3" ImageURL="~/Public/TestProducts/test_preview/1.jpg" runat="server"></asp:Image>
+                        <asp:Image CssClass="w-1/3" ImageURL="~/Public/TestProducts/test_preview/2.jpg" runat="server"></asp:Image>
+                        <asp:Image CssClass="w-1/3" ImageURL="~/Public/TestProducts/test_preview/3.jpg" runat="server"></asp:Image>
                     </div>
                 </div>
 
