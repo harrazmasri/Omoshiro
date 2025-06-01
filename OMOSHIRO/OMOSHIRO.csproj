@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\OmoshiroDB.mdf" />
+    <Content Include="App_Data\OmoshiroDB_log.ldf">
+      <DependentUpon>OmoshiroDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Public\Icon\lucide--gamepad-2.svg" />
     <Content Include="Public\Icon\trello.svg" />
     <Content Include="Views\Admin\AdminLogIn.aspx" />
@@ -156,6 +160,7 @@
     <Content Include="Views\Dashboard\UC\GridLayout.ascx" />
     <Content Include="Views\Dashboard\UC\RackLayout.ascx" />
     <Content Include="Views\Dashboard\UC\TopBar.ascx" />
+    <Content Include="Views\addproduct.aspx" />
     <Content Include="Web.config" />
     <Content Include="Views\Admin\DashboardAdmin.aspx" />
   </ItemGroup>
@@ -169,6 +174,7 @@
     </Compile>
     <Compile Include="Views\DashboardAdmin.Master.cs">
       <DependentUpon>DashboardAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\DashboardAdmin.Master.designer.cs">
       <DependentUpon>DashboardAdmin.Master</DependentUpon>
@@ -176,6 +182,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
@@ -299,6 +306,13 @@
     <Compile Include="Views\Admin\DashboardAdmin.aspx.designer.cs">
       <DependentUpon>DashboardAdmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\addproduct.aspx.cs">
+      <DependentUpon>addproduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\addproduct.aspx.designer.cs">
+      <DependentUpon>addproduct.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\DashboardAdmin.Master" />
@@ -314,6 +328,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Images\Thumbnails\" />
     <Folder Include="Src\Font\" />
   </ItemGroup>
   <PropertyGroup>
