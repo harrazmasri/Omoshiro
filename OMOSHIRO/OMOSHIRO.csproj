@@ -73,6 +73,7 @@
     </Content>
     <Content Include="Public\Icon\lucide--gamepad-2.svg" />
     <Content Include="Public\Icon\trello.svg" />
+    <Content Include="Views\Admin\editproduct.aspx" />
     <Content Include="Views\Admin\AdminLogIn.aspx" />
     <Content Include="Public\Banner\banner1.jpg" />
     <Content Include="Public\Banner\banner2.jpg" />
@@ -160,11 +161,17 @@
     <Content Include="Views\Dashboard\UC\GridLayout.ascx" />
     <Content Include="Views\Dashboard\UC\RackLayout.ascx" />
     <Content Include="Views\Dashboard\UC\TopBar.ascx" />
-    <Content Include="Views\addproduct.aspx" />
+    <Content Include="Views\Admin\addproduct.aspx" />
     <Content Include="Web.config" />
     <Content Include="Views\Admin\DashboardAdmin.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\Admin\editproduct.aspx.cs">
+      <DependentUpon>editproduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\editproduct.aspx.designer.cs">
+      <DependentUpon>editproduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\AdminLogIn.aspx.cs">
       <DependentUpon>AdminLogIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,7 +238,6 @@
     </Compile>
     <Compile Include="Views\Dashboard\ProductView.aspx.cs">
       <DependentUpon>ProductView.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Dashboard\ProductView.aspx.designer.cs">
       <DependentUpon>ProductView.aspx</DependentUpon>
@@ -280,7 +286,6 @@
     </Compile>
     <Compile Include="Views\Dashboard\UC\GridLayout.ascx.cs">
       <DependentUpon>GridLayout.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Dashboard\UC\GridLayout.ascx.designer.cs">
       <DependentUpon>GridLayout.ascx</DependentUpon>
@@ -306,11 +311,11 @@
     <Compile Include="Views\Admin\DashboardAdmin.aspx.designer.cs">
       <DependentUpon>DashboardAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\addproduct.aspx.cs">
+    <Compile Include="Views\Admin\addproduct.aspx.cs">
       <DependentUpon>addproduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\addproduct.aspx.designer.cs">
+    <Compile Include="Views\Admin\addproduct.aspx.designer.cs">
       <DependentUpon>addproduct.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -328,8 +333,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\Thumbnails\" />
     <Folder Include="Src\Font\" />
+    <Folder Include="Storage\Images\Gallery\" />
+    <Folder Include="Storage\Images\Thumbnails\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

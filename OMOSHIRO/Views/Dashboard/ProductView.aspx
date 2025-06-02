@@ -10,21 +10,23 @@
         <div class="w-[800px] mx-auto flex flex-col items-start gap-5">
             
             <div class="w-full flex flex-col gap-3">
-                <h1 class="text-3xl mb-5">Battlefield 1</h1>
+                <asp:Label ID="GameTitle" runat="server" CssClass="text-3xl mb-5" Text="Label"></asp:Label>
+                
                 <div class="w-full overflow-clip rounded-[10px]">
-                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Public/TestProducts/header (45).jpg" CssClass="w-full object-cover" />
+                    <asp:Image ID="GameImage" runat="server" ImageUrl="" CssClass="w-full object-cover" />
                 </div>
 
-                <div class="w-full">
-                    <asp:Label class="bg-gray-800 w-fit rounded py-1 px-2 text-sm font-400">war</asp:Label>
-                    <asp:Label class="bg-gray-800 w-fit rounded py-1 px-2 text-sm font-400">rpg</asp:Label>
-                    <asp:Label class="bg-gray-800 w-fit rounded py-1 px-2 text-sm font-400">firt-person-shooter</asp:Label>
-                    <asp:Label class="bg-gray-800 w-fit rounded py-1 px-2 text-sm font-400">action</asp:Label>
-                    <asp:Label class="bg-gray-800 w-fit rounded py-1 px-2 text-sm font-400">thriller</asp:Label>
-                </div>
+                <asp:Repeater ID="CategoryRepeater" runat="server">
+                    <HeaderTemplate>
+                        <div class="w-full">
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <label class="bg-gray-800 w-fit rounded py-1 px-2 text-sm font-400"><%# Container.DataItem %></label>
+                    </ItemTemplate>
+                </asp:Repeater>
 
                 <div class="w-full flex justify-between items-end">
-                    <p>RM<span class="text-2xl">192.32</span><p>
+                    <p>RM<asp:Label CssClass="text-2xl" ID="GamePrice" runat="server" Text="0.00"></asp:Label><p>
                     <div class="bg-purple-800 flex items-center gap-3 w-fit text-white hover:brightness-75 rounded py-2 px-4">
                         <asp:Image CssClass="invert w-[14px]" ImageURL="~/Public/Icon/shopping-cart.svg" runat="server"></asp:Image>
                         <p>Add To Cart</p>
@@ -36,29 +38,24 @@
                 <div class="w-full mb-5">
                     <h4 class="mb-3 text-xl">Gallery</h4>
 
-                    <div class="flex w-full rounded-[10px] overflow-clip">
-                        <asp:Image CssClass="w-1/3" ImageURL="~/Public/TestProducts/test_preview/1.jpg" runat="server"></asp:Image>
-                        <asp:Image CssClass="w-1/3" ImageURL="~/Public/TestProducts/test_preview/2.jpg" runat="server"></asp:Image>
-                        <asp:Image CssClass="w-1/3" ImageURL="~/Public/TestProducts/test_preview/3.jpg" runat="server"></asp:Image>
-                    </div>
+                    <asp:Repeater ID="GalleryRepeater" runat="server">
+                        <HeaderTemplate>
+                            <div class="flex w-full rounded-[10px] overflow-clip">
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <asp:Image CssClass="w-1/3" ImageUrl='<%# ResolveUrl(Eval("directory").ToString() + "/" + Eval("fileName").ToString()) %>' runat="server" />
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </div>
 
                 <div class="w-full mb-5">
                     <h4 class="mb-3 text-xl">Description</h4>
-                    <p class="text-slate-500">Battlefield 1 is a first-person shooter video game developed by EA DICE and published by Electronic Arts. It is the fifteenth installment in the Battlefield series, and the first main entry since Battlefield 4. The game is set in the World War I era, featuring a variety of historical battles and locations.</p>
+                    <asp:Label CssClass="text-slate-300" ID="GameDescription" runat="server" Text="-"></asp:Label>
                 </div>
 
                 <div class="w-full mb-5">
                     <h4 class="mb-3 text-xl">Requirements</h4>
-                    <asp:BulletedList runat="server">
-                        <asp:ListItem>OS: Windows 10 64-bit</asp:ListItem>
-                        <asp:ListItem>Processor: AMD FX-6350 / Intel Core i5-6600K</asp:ListItem>
-                        <asp:ListItem>Memory: 8 GB RAM</asp:ListItem>
-                        <asp:ListItem>Graphics: AMD Radeon HD 7850 / NVIDIA GeForce GTX 660</asp:ListItem>
-                        <asp:ListItem>DirectX: Version 11</asp:ListItem>
-                        <asp:ListItem>Network: Broadband Internet connection</asp:ListItem>
-                        <asp:ListItem>Storage: 50 GB available space</asp:ListItem>
-                    </asp:BulletedList>
+                    <asp:Label CssClass="text-slate-300" ID="GameRequirement" runat="server" Text="-"></asp:Label>
                 </div>
             </div>
         </div>
