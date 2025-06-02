@@ -27,8 +27,10 @@
                     <asp:HyperLink ID="HyperLink3" runat="server">Log Out</asp:HyperLink>   
                 </div>            
             </div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            <div class="grow h-full max-h-screen overflow-y-scroll">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
         </div>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
     <Scripts>
