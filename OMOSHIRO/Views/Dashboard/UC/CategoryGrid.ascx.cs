@@ -16,12 +16,23 @@ namespace OMOSHIRO.Views.Dashboard.UC
         {
             if (!IsPostBack)
             {
+                string parameter = Request.QueryString["category"];
+
                 List<Product> products = new List<Product>();
                 string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
-                    string query = "SELECT gameTitle, gamePrice, gameDirectory, gameThumbnail FROM GameProduct WHERE gameisActive = 1 ORDER BY gameID DESC";
+                    string query = (parameter == null) ?
+                        "SELECT gameTitle, gamePrice, gameDirectory, gameThumbnail FROM GameProduct WHERE gameisActive = 1 ORDER BY gameID DESC" :
+                        "SELECT gameTitle, gamePrice, gameDirectory, gameThumbnail FROM GameProduct WHERE gameisActive = 1 AND gameCategory LIKE @category ORDER BY gameID DESC";
+
                     SqlCommand cmd = new SqlCommand(query, conn);
+
+                    if (parameter != null)
+                    {
+                        cmd.Parameters.AddWithValue("@category", "%" + parameter + "%");
+                    }
+
 
                     conn.Open();
                     SqlDataReader reader = cmd.ExecuteReader();
