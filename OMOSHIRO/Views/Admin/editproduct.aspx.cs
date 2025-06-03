@@ -51,7 +51,6 @@ namespace OMOSHIRO.Views.Admin
 
                 Product fetchedProduct = new Product();
                 string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     string query = "SELECT * FROM GameProduct WHERE gameID = @gameID";

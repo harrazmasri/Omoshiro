@@ -10,68 +10,55 @@
     <div class="relative w-full h-fit px-[7rem] mb-7 flex mt-[70px] py-6">
     
         <div class="w-[250px] py-4 px-5 rounded-[5px] bg-slate-800 text-sm">
-            <h4 class="text-lg mb-5">Genres</h4>
+            <h4 class="text-lg mb-2">Genres</h4>
 
-            <!-- Action -->
-            <asp:Label CssClass="font-400 text-slate-500" runat="server" Text="Action" Font-Bold="true" /><br />
-            <asp:Button runat="server" Text="Action" OnClick="Genre_Click" CommandArgument="action" /><br />
-            <asp:Button runat="server" Text="Arcade & Rhythm" OnClick="Genre_Click" CommandArgument="arcade_rhythm" /><br />
-            <asp:Button runat="server" Text="Fighting & Martial Arts" OnClick="Genre_Click" CommandArgument="fighting_martial_arts" /><br />
-            <asp:Button runat="server" Text="First-Person Shooter" OnClick="Genre_Click" CommandArgument="fps" /><br />
-            <asp:Button runat="server" Text="Hack & Slash" OnClick="Genre_Click" CommandArgument="hack_slash" /><br />
-            <asp:Button runat="server" Text="Platformer & Runner" OnClick="Genre_Click" CommandArgument="platformer_runner" /><br />
-            <asp:Button runat="server" Text="Third-Person Shooter" OnClick="Genre_Click" CommandArgument="tps" /><br />
-            <asp:Button runat="server" Text="shmup" OnClick="Genre_Click" CommandArgument="shmup" /><br /><br />
+            <p class="mt-3 font-400 text-slate-500"><asp:Label runat="server" Text="Action" Font-Bold="true" /></p>
+            <asp:HyperLink ID="arcade_rhythm" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=arcade_rhythm">Arcade & Rhythm</asp:HyperLink><br />
+            <asp:HyperLink ID="fighting_martial_arts" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=fighting_martial_arts">Fighting & Martial Arts</asp:HyperLink><br />
+            <asp:HyperLink ID="fps" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=fps">First-Person Shooter</asp:HyperLink><br />
+            <asp:HyperLink ID="hack_slash" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=hack_slash">Hack & Slash</asp:HyperLink><br />
+            <asp:HyperLink ID="platformer_runner" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=platformer_runner">Platformer & Runner</asp:HyperLink><br />
+            <asp:HyperLink ID="tps" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=tps">Third-Person Shooter</asp:HyperLink><br />
+            <asp:HyperLink ID="shmup" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=shmup">shmup</asp:HyperLink><br />
 
-            <!-- Adventure -->
-            <asp:Label CssClass="font-400 text-slate-500" runat="server" Text="Adventure" Font-Bold="true" /><br />
-            <asp:Button runat="server" Text="Adventure RPG" OnClick="Genre_Click" CommandArgument="adventure_rpg" /><br />
-            <asp:Button runat="server" Text="Casual" OnClick="Genre_Click" CommandArgument="casual" /><br />
-            <asp:Button runat="server" Text="Hidden Object" OnClick="Genre_Click" CommandArgument="hidden_object" /><br />
-            <asp:Button runat="server" Text="Metroidvania" OnClick="Genre_Click" CommandArgument="metroidvania" /><br />
-            <asp:Button runat="server" Text="Puzzle" OnClick="Genre_Click" CommandArgument="puzzle" /><br />
-            <asp:Button runat="server" Text="Story-Rich" OnClick="Genre_Click" CommandArgument="story_rich" /><br />
-            <asp:Button runat="server" Text="Visual Novel" OnClick="Genre_Click" CommandArgument="visual_novel" /><br /><br />
+            <p class="mt-3 font-400 text-slate-500"><asp:Label runat="server" Text="Adventure RPG" Font-Bold="true" /></p>
+            <asp:HyperLink ID="casual" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=casual">Casual</asp:HyperLink><br />
+            <asp:HyperLink ID="hidden_object" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=hidden_object">Hidden Object</asp:HyperLink><br />
+            <asp:HyperLink ID="metroidvania" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=metroidvania">Metroidvania</asp:HyperLink><br />
+            <asp:HyperLink ID="puzzle" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=puzzle">Puzzle</asp:HyperLink><br />
+            <asp:HyperLink ID="story_rich" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=story_rich">Story-Rich</asp:HyperLink><br />
+            <asp:HyperLink ID="visual_novel" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=visual_novel">Visual Novel</asp:HyperLink><br />
 
-            <!-- Role-Playing -->
-            <asp:Label CssClass="font-400 text-slate-500" runat="server" Text="Role-Playing" Font-Bold="true" /><br />
-            <asp:Button runat="server" Text="Action RPG" OnClick="Genre_Click" CommandArgument="action_rpg" /><br />
-            <asp:Button runat="server" Text="Adventure RPG" OnClick="Genre_Click" CommandArgument="adventure_rpg" /><br />
-            <asp:Button runat="server" Text="JRPG" OnClick="Genre_Click" CommandArgument="jrpg" /><br />
-            <asp:Button runat="server" Text="Party-Based" OnClick="Genre_Click" CommandArgument="party_based" /><br />
-            <asp:Button runat="server" Text="Rogue-Like" OnClick="Genre_Click" CommandArgument="rogue_like" /><br />
-            <asp:Button runat="server" Text="Strategy RPG" OnClick="Genre_Click" CommandArgument="strategy_rpg" /><br />
-            <asp:Button runat="server" Text="Turn-Based" OnClick="Genre_Click" CommandArgument="turn_based" /><br /><br />
+            <p class="mt-3 font-400 text-slate-500"><asp:Label runat="server" Text="Action RPG" Font-Bold="true" /></p>
+            <asp:HyperLink ID="jrpg" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=jrpg">JRPG</asp:HyperLink><br />
+            <asp:HyperLink ID="party_based" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=party_based">Party-Based</asp:HyperLink><br />
+            <asp:HyperLink ID="rogue_like" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=rogue_like">Rogue-Like</asp:HyperLink><br />
+            <asp:HyperLink ID="strategy_rpg" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=strategy_rpg">Strategy RPG</asp:HyperLink><br />
+            <asp:HyperLink ID="turn_based" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=turn_based">Turn-Based</asp:HyperLink><br />
 
-            <!-- Strategy -->
-            <asp:Label CssClass="font-400 text-slate-500" runat="server" Text="Strategy" Font-Bold="true" /><br />
-            <asp:Button runat="server" Text="Card & Board" OnClick="Genre_Click" CommandArgument="card_board" /><br />
-            <asp:Button runat="server" Text="City & Settlement" OnClick="Genre_Click" CommandArgument="city_settlement" /><br />
-            <asp:Button runat="server" Text="Grand & 4X" OnClick="Genre_Click" CommandArgument="grand_4x" /><br />
-            <asp:Button runat="server" Text="Military" OnClick="Genre_Click" CommandArgument="military" /><br />
-            <asp:Button runat="server" Text="Real-Time Strategy" OnClick="Genre_Click" CommandArgument="rts" /><br />
-            <asp:Button runat="server" Text="Tower Defense" OnClick="Genre_Click" CommandArgument="tower_defense" /><br />
-            <asp:Button runat="server" Text="Turn-Based Strategy" OnClick="Genre_Click" CommandArgument="turn_based_strategy" /><br /><br />
+            <p class="mt-3 font-400 text-slate-500"><asp:Label runat="server" Text="Card & Board" Font-Bold="true" /></p>
+            <asp:HyperLink ID="city_settlement" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=city_settlement">City & Settlement</asp:HyperLink><br />
+            <asp:HyperLink ID="grand_4x" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=grand_4x">Grand & 4X</asp:HyperLink><br />
+            <asp:HyperLink ID="military" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=military">Military</asp:HyperLink><br />
+            <asp:HyperLink ID="rts" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=rts">Real-Time Strategy</asp:HyperLink><br />
+            <asp:HyperLink ID="tower_defense" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=tower_defense">Tower Defense</asp:HyperLink><br />
+            <asp:HyperLink ID="turn_based_strategy" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=turn_based_strategy">Turn-Based Strategy</asp:HyperLink><br />
 
-            <!-- Simulation -->
-            <asp:Label CssClass="font-400 text-slate-500" runat="server" Text="Simulation" Font-Bold="true" /><br />
-            <asp:Button runat="server" Text="Building & Automation" OnClick="Genre_Click" CommandArgument="building_automation" /><br />
-            <asp:Button runat="server" Text="Dating" OnClick="Genre_Click" CommandArgument="dating" /><br />
-            <asp:Button runat="server" Text="Farming & Crafting" OnClick="Genre_Click" CommandArgument="farming_crafting" /><br />
-            <asp:Button runat="server" Text="Hobby & Job" OnClick="Genre_Click" CommandArgument="hobby_job" /><br />
-            <asp:Button runat="server" Text="Life & Immersive" OnClick="Genre_Click" CommandArgument="life_immersive" /><br />
-            <asp:Button runat="server" Text="Sandbox & Physics" OnClick="Genre_Click" CommandArgument="sandbox_physics" /><br />
-            <asp:Button runat="server" Text="Space & Flight" OnClick="Genre_Click" CommandArgument="space_flight" /><br /><br />
+            <p class="mt-3 font-400 text-slate-500"><asp:Label runat="server" Text="Building & Automation" Font-Bold="true" /></p>
+            <asp:HyperLink ID="dating" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=dating">Dating</asp:HyperLink><br />
+            <asp:HyperLink ID="farming_crafting" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=farming_crafting">Farming & Crafting</asp:HyperLink><br />
+            <asp:HyperLink ID="hobby_job" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=hobby_job">Hobby & Job</asp:HyperLink><br />
+            <asp:HyperLink ID="life_immersive" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=life_immersive">Life & Immersive</asp:HyperLink><br />
+            <asp:HyperLink ID="sandbox_physics" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=sandbox_physics">Sandbox & Physics</asp:HyperLink><br />
+            <asp:HyperLink ID="space_flight" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=space_flight">Space & Flight</asp:HyperLink><br />
 
-            <!-- Sports & Racing -->
-            <asp:Label CssClass="font-400 text-slate-500" runat="server" Text="Sports & Racing" Font-Bold="true" /><br />
-            <asp:Button runat="server" Text="All Sports" OnClick="Genre_Click" CommandArgument="all_sports" /><br />
-            <asp:Button runat="server" Text="Fishing & Hunting" OnClick="Genre_Click" CommandArgument="fishing_hunting" /><br />
-            <asp:Button runat="server" Text="Individual Sports" OnClick="Genre_Click" CommandArgument="individual_sports" /><br />
-            <asp:Button runat="server" Text="Racing" OnClick="Genre_Click" CommandArgument="racing" /><br />
-            <asp:Button runat="server" Text="Racing Sim" OnClick="Genre_Click" CommandArgument="racing_sim" /><br />
-            <asp:Button runat="server" Text="Sports Sim" OnClick="Genre_Click" CommandArgument="sports_sim" /><br />
-            <asp:Button runat="server" Text="Team Sports" OnClick="Genre_Click" CommandArgument="team_sports" /><br />
+            <p class="mt-3 font-400 text-slate-500"><asp:Label runat="server" Text="All Sports" Font-Bold="true" /></p>
+            <asp:HyperLink ID="fishing_hunting" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=fishing_hunting">Fishing & Hunting</asp:HyperLink><br />
+            <asp:HyperLink ID="individual_sports" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=individual_sports">Individual Sports</asp:HyperLink><br />
+            <asp:HyperLink ID="racing" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=racing">Racing</asp:HyperLink><br />
+            <asp:HyperLink ID="racing_sim" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=racing_sim">Racing Sim</asp:HyperLink><br />
+            <asp:HyperLink ID="sports_sim" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=sports_sim">Sports Sim</asp:HyperLink><br />
+            <asp:HyperLink ID="team_sports" runat="server" NavigateUrl="~/Views/Dashboard/Category.aspx?category=team_sports">Team Sports</asp:HyperLink><br />
         </div>
 
 
