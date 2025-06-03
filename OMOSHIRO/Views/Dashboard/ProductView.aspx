@@ -27,10 +27,11 @@
 
                 <div class="w-full flex justify-between items-end">
                     <p>RM<asp:Label CssClass="text-2xl" ID="GamePrice" runat="server" Text="0.00"></asp:Label><p>
-                    <div class="bg-purple-800 flex items-center gap-3 w-fit text-white hover:brightness-75 rounded py-2 px-4">
-                        <asp:Image CssClass="invert w-[14px]" ImageURL="~/Public/Icon/shopping-cart.svg" runat="server"></asp:Image>
-                        <p>Add To Cart</p>
-                    </div>
+                    
+                   <asp:LinkButton ID="CartButton" OnClick="CartButton_Click" runat="server" CssClass="bg-purple-800 flex items-center gap-3 w-fit text-white hover:brightness-75 rounded py-2 px-4">
+                        <asp:Image CssClass="invert w-[14px]" ImageUrl="~/Public/Icon/shopping-cart.svg" runat="server" />
+                        <asp:Label ID="CartButtonLabel" runat="server" Text="Add To Cart"></asp:Label>
+                    </asp:LinkButton>
                 </div>
             </div>
 

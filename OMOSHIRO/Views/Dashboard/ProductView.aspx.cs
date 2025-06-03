@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace OMOSHIRO.Views.Dashboard
 {
+    [Serializable]
     public class Product
     {
         public int GameId { get; set; }
@@ -29,6 +31,11 @@ namespace OMOSHIRO.Views.Dashboard
 
     public partial class ProductView : System.Web.UI.Page
 	{
+        public Product CurrentProduct
+        {
+            get { return ViewState["CurrentProduct"] as Product; }
+            set { ViewState["CurrentProduct"] = value; }
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -68,6 +75,8 @@ namespace OMOSHIRO.Views.Dashboard
                             Requirement = reader["gameReq"].ToString(),
                             Category = reader["gameCategory"].ToString()
                         };
+
+                        ViewState["CurrentProduct"] = fetchedProduct;
                     }
                     conn.Close();
 
@@ -121,5 +130,27 @@ namespace OMOSHIRO.Views.Dashboard
             return split;
         }
 
+        protected void CartButton_Click(object sender, EventArgs e)
+        {
+            string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                // fetch product details
+                string query = "INSERT INTO Cart (GameProductId, UserId) VALUES (@GameProductId, @UserId);";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@GameProductId", Convert.ToInt32(CurrentProduct.GameId));
+                cmd.Parameters.AddWithValue("@UserId", Convert.ToInt32(Session["LoggedUserId"]));
+                conn.Open();
+
+                int execution = cmd.ExecuteNonQuery();
+
+                if (execution > 0)
+                {
+                    CartButtonLabel.Text = "Added to Cart";
+                }
+
+                conn.Close();
+            }
+        }
     }
 }

@@ -7,7 +7,7 @@
         <div class="flex items-center w-full gap-4">
     </HeaderTemplate>
     <ItemTemplate>
-       <a href='./ProductView.aspx?title=<%# Eval("Title") %>'>
+       <a href='<%# ResolveUrl("~/Views/Dashboard/ProductView.aspx?title=" + Eval("Title")) %>'>
             <div class="relative w-[500px] aspect-[460/215] overflow-clip rounded-lg group">
                 <asp:Image CssClass="absolute z-0 top-0 left-0 w-[500px] group-hover:scale-110 transition duration-500 brightness-50 group-hover:brightness-75" ID="Image1" ImageUrl='<%# ResolveUrl(Eval("Image").ToString()) %>' runat="server" />
                 <div class="flex items-end relative h-full">

@@ -13,6 +13,7 @@ namespace OMOSHIRO.Views.Authentication
 {
     public class User 
     {
+        public string Id { get; set; }
         public string Username { get; set; }
         public string Fullname { get; set; }
         public string Email { get; set; }
@@ -67,6 +68,7 @@ namespace OMOSHIRO.Views.Authentication
                         {
                             fetchedUser = new User
                             {
+                                Id = reader["Id"].ToString(),
                                 Username = reader["username"].ToString(),
                                 Fullname = reader["full_name"].ToString(),
                                 Email = reader["email"].ToString(),
@@ -75,6 +77,7 @@ namespace OMOSHIRO.Views.Authentication
 
                             //lblMessage.Text = fetchedUser.Fullname;
 
+                            Session["LoggedUserId"] = fetchedUser.Id;
                             Session["LoggedUsername"] = fetchedUser.Username;
                             Session["LoggedFullname"] = fetchedUser.Fullname;
                             Session["LoggedEmail"] = fetchedUser.Email;

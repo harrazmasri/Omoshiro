@@ -30,7 +30,7 @@ namespace OMOSHIRO.Views.Dashboard
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OMOSHIRO.Views.Dashboard.UC.CategoryGrid ProfileInventory;
+        protected global::OMOSHIRO.Views.Dashboard.UC.ProfileInventory ProfileInventory;
 
         /// <summary>
         /// Button1 control.

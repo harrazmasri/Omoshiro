@@ -51,6 +51,24 @@ namespace OMOSHIRO.Views.Dashboard
         protected global::System.Web.UI.WebControls.Label GamePrice;
 
         /// <summary>
+        /// CartButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton CartButton;
+
+        /// <summary>
+        /// CartButtonLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CartButtonLabel;
+
+        /// <summary>
         /// GalleryRepeater control.
         /// </summary>
         /// <remarks>
