@@ -51,7 +51,7 @@ namespace OMOSHIRO.Views.Authentication
                             cmd.Parameters.AddWithValue("@username", UserName.Text);
                             cmd.Parameters.AddWithValue("@full_name", FullName.Text);
                             cmd.Parameters.AddWithValue("@email", Email.Text);
-                            cmd.Parameters.AddWithValue("@role", "users");
+                            cmd.Parameters.AddWithValue("@role", "user");
 
                             string hashedPassword = HashPassword(Password.Text);
                             cmd.Parameters.AddWithValue("@password", hashedPassword);
