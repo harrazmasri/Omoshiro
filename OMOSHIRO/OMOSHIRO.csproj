@@ -203,7 +203,6 @@
     </Compile>
     <Compile Include="Views\Authentication\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Authentication\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -299,7 +298,6 @@
     </Compile>
     <Compile Include="Views\Dashboard\UC\TopBar.ascx.cs">
       <DependentUpon>TopBar.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Dashboard\UC\TopBar.ascx.designer.cs">
       <DependentUpon>TopBar.ascx</DependentUpon>
