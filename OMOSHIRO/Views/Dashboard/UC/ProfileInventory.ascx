@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ProfileInventory.ascx.cs" Inherits="OMOSHIRO.Views.Dashboard.UC.CategoryGrid" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ProfileInventory.ascx.cs" Inherits="OMOSHIRO.Views.Dashboard.UC.ProfileInventory" %>
 
 <div class="grid grid-cols-4 grid-flow-row auto-rows-max gap-4">
     <% for (int index = 0; index < 10; index++) { %>

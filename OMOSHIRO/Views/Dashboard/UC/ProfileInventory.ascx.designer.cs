@@ -11,7 +11,7 @@ namespace OMOSHIRO.Views.Dashboard.UC
 {
 
 
-    public partial class CategoryGrid
+    public partial class ProfileInventory
     {
     }
 }

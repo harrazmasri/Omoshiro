@@ -24,12 +24,21 @@ namespace OMOSHIRO.Views.Dashboard
         protected global::OMOSHIRO.Views.Dashboard.UC.CartList CartList;
 
         /// <summary>
-        /// Button1 control.
+        /// TotalAmountLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label TotalAmountLabel;
+
+        /// <summary>
+        /// CheckoutButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CheckoutButton;
     }
 }

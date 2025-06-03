@@ -16,10 +16,10 @@
         <div class="w-full flex flex-col items-end border-t border-slate-700 pt-4">
             <div class="w-full mb-5 flex justify-between items-center">
                 <p>Total amount:</p>
-                <h3 class="text-3xl">RM30.33</h3>
+                <h3 class="text-3xl">RM <asp:Label ID="TotalAmountLabel" runat="server" Text=""></asp:Label></h3>
             </div>
 
-            <asp:Button CssClass="bg-purple-800 w-fit text-white hover:brightness-75 rounded py-2 px-4" ID="Button1" runat="server" Text="Checkout" />
+            <asp:Button OnClick="CheckoutButton_Click" CssClass="bg-purple-800 w-fit text-white hover:brightness-75 rounded py-2 px-4" ID="CheckoutButton" runat="server" Text="Checkout" />
         </div>
     </div>
 </asp:Content>

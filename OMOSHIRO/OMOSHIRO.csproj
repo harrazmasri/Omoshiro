@@ -155,10 +155,10 @@
     <Content Include="Views\Dashboard\Profile.aspx" />
     <Content Include="Views\Dashboard\Store.aspx" />
     <Content Include="Views\Dashboard\UC\CartList.ascx" />
-    <Content Include="Views\Dashboard\UC\ProfileInventory.ascx" />
     <Content Include="Views\Dashboard\UC\CategoryGrid.ascx" />
     <Content Include="Views\Dashboard\UC\Featured.ascx" />
     <Content Include="Views\Dashboard\UC\GridLayout.ascx" />
+    <Content Include="Views\Dashboard\UC\ProfileInventory.ascx" />
     <Content Include="Views\Dashboard\UC\RackLayout.ascx" />
     <Content Include="Views\Dashboard\UC\TopBar.ascx" />
     <Content Include="Views\Admin\addproduct.aspx" />
@@ -262,13 +262,6 @@
     <Compile Include="Views\Dashboard\UC\CartList.ascx.designer.cs">
       <DependentUpon>CartList.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Dashboard\UC\ProfileInventory.ascx.cs">
-      <DependentUpon>ProfileInventory.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Dashboard\UC\ProfileInventory.ascx.designer.cs">
-      <DependentUpon>ProfileInventory.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Views\Dashboard\UC\CategoryGrid.ascx.cs">
       <DependentUpon>CategoryGrid.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -288,6 +281,13 @@
     </Compile>
     <Compile Include="Views\Dashboard\UC\GridLayout.ascx.designer.cs">
       <DependentUpon>GridLayout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\ProfileInventory.ascx.cs">
+      <DependentUpon>ProfileInventory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\ProfileInventory.ascx.designer.cs">
+      <DependentUpon>ProfileInventory.ascx</DependentUpon>
     </Compile>
     <Compile Include="Views\Dashboard\UC\RackLayout.ascx.cs">
       <DependentUpon>RackLayout.ascx</DependentUpon>
