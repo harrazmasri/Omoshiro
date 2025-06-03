@@ -175,7 +175,6 @@
     </Compile>
     <Compile Include="Views\Admin\AdminLogIn.aspx.cs">
       <DependentUpon>AdminLogIn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Admin\AdminLogIn.aspx.designer.cs">
       <DependentUpon>AdminLogIn.aspx</DependentUpon>
