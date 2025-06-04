@@ -1,5 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CartList.ascx.cs" Inherits="OMOSHIRO.Views.Dashboard.UC.CartList" %>
 
+<asp:Label ID="errorMessage" CssClass="text-sm text-gray-500 mb-2 text-red-400" runat="server" Text=""></asp:Label>
+
 <asp:Repeater ID="CartRepeater" runat="server">
     <HeaderTemplate>
         <div class="w-full">
@@ -24,7 +26,7 @@
                 </div>
             </a>
             
-            <asp:LinkButton ID="RemoveFromCart" OnClick="RemoveFromCart_Click" runat="server">
+            <asp:LinkButton ID="RemoveFromCart" OnCommand="RemoveFromCart_Click" CommandArgument='<%# Eval("GameId") %>' runat="server">
                 <div class="my-auto hover:bg-slate-950 rounded-full w-[30px] h-[30px] flex items-center justify-center">
                     <asp:Image class="invert w-[20px]" ImageUrl="~/Public/Icon/x.svg" runat="server"></asp:Image>
                 </div>

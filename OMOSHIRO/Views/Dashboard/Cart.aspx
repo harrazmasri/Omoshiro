@@ -19,7 +19,8 @@
                 <h3 class="text-3xl">RM <asp:Label ID="TotalAmountLabel" runat="server" Text=""></asp:Label></h3>
             </div>
 
-            <asp:Button OnClick="CheckoutButton_Click" CssClass="bg-purple-800 w-fit text-white hover:brightness-75 rounded py-2 px-4" ID="CheckoutButton" runat="server" Text="Checkout" />
+            <asp:Button OnClick="CheckoutButton_Click" CssClass="hover:cursor-pointer bg-purple-800 w-fit text-white hover:brightness-75 rounded py-2 px-4 disabled:brightness-75 disabled:bg-gray-700" ID="CheckoutButton" runat="server" Text="Checkout" />
+            <asp:Label ID="LowBalanceLabel" CssClass="text-[12px] text-gray-400 mt-2" runat="server" Text=""></asp:Label>
         </div>
     </div>
 </asp:Content>

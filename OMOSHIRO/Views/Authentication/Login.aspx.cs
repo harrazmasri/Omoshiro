@@ -18,6 +18,7 @@ namespace OMOSHIRO.Views.Authentication
         public string Fullname { get; set; }
         public string Email { get; set; }
         public string Role { get; set; }
+        public decimal Balance { get; set; }
     }
 
 	public partial class Login : System.Web.UI.Page
@@ -49,8 +50,7 @@ namespace OMOSHIRO.Views.Authentication
                 string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
-                    string query = @"
-                        SELECT * FROM Users WHERE username=@username AND password=@password AND role = 'user'";
+                    string query = @"SELECT * FROM Users WHERE username=@username AND password=@password AND role = 'user'";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -73,6 +73,7 @@ namespace OMOSHIRO.Views.Authentication
                                 Fullname = reader["full_name"].ToString(),
                                 Email = reader["email"].ToString(),
                                 Role = reader["role"].ToString(),
+                                Balance = Convert.ToDecimal(reader["balance"])
                             };
 
                             //lblMessage.Text = fetchedUser.Fullname;
@@ -82,6 +83,7 @@ namespace OMOSHIRO.Views.Authentication
                             Session["LoggedFullname"] = fetchedUser.Fullname;
                             Session["LoggedEmail"] = fetchedUser.Email;
                             Session["LoggedRole"] = fetchedUser.Role;
+                            Session["LoggedBalance"] = fetchedUser.Balance;
 
                             //Session["LoggedUser"] = fetchedUser;
 
@@ -91,7 +93,7 @@ namespace OMOSHIRO.Views.Authentication
                             lblMessage.Text = "Username or password mismatch. Please try again.";
                         }
 
-                            conn.Close();
+                        conn.Close();
 
                     }
                 }

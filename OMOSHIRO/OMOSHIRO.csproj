@@ -71,7 +71,10 @@
     <Content Include="App_Data\OmoshiroDB_log.ldf">
       <DependentUpon>OmoshiroDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Public\Icon\check.svg" />
     <Content Include="Public\Icon\lucide--gamepad-2.svg" />
+    <Content Include="Public\Icon\plus.svg" />
+    <Content Include="Public\Icon\shopping-bag.svg" />
     <Content Include="Public\Icon\trello.svg" />
     <Content Include="Views\Admin\editproduct.aspx" />
     <Content Include="Views\Admin\AdminLogIn.aspx" />
@@ -150,11 +153,13 @@
     <Content Include="Views\Admin\ProductTable.aspx" />
     <Content Include="Views\Authentication\Login.aspx" />
     <Content Include="Views\Authentication\Register.aspx" />
+    <Content Include="Views\Dashboard\CheckoutSuccess.aspx" />
     <Content Include="Views\Dashboard\Cart.aspx" />
     <Content Include="Views\Dashboard\Category.aspx" />
     <Content Include="Views\Dashboard\ProductView.aspx" />
     <Content Include="Views\Dashboard\Profile.aspx" />
     <Content Include="Views\Dashboard\Store.aspx" />
+    <Content Include="Views\Dashboard\TopUpWallet.aspx" />
     <Content Include="Views\Dashboard\UC\CartList.ascx" />
     <Content Include="Views\Dashboard\UC\CategoryGrid.ascx" />
     <Content Include="Views\Dashboard\UC\Featured.ascx" />
@@ -185,6 +190,13 @@
     </Compile>
     <Compile Include="Views\Admin\ProductTable.aspx.designer.cs">
       <DependentUpon>ProductTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\CheckoutSuccess.aspx.cs">
+      <DependentUpon>CheckoutSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\CheckoutSuccess.aspx.designer.cs">
+      <DependentUpon>CheckoutSuccess.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\DashboardAdmin.Master.cs">
       <DependentUpon>DashboardAdmin.Master</DependentUpon>
@@ -250,7 +262,6 @@
     </Compile>
     <Compile Include="Views\Dashboard\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Dashboard\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
@@ -261,6 +272,13 @@
     </Compile>
     <Compile Include="Views\Dashboard\Store.aspx.designer.cs">
       <DependentUpon>Store.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\TopUpWallet.aspx.cs">
+      <DependentUpon>TopUpWallet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\TopUpWallet.aspx.designer.cs">
+      <DependentUpon>TopUpWallet.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Dashboard\UC\CartList.ascx.cs">
       <DependentUpon>CartList.ascx</DependentUpon>

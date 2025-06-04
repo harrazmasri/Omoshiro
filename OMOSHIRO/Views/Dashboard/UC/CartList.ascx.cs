@@ -29,13 +29,22 @@ namespace OMOSHIRO.Views.Dashboard.UC
 		{
             if (!IsPostBack)
             {
-                List<Product> fetchedProducts = new List<Product>();
+                loadCart();
+            }
+        }
 
-                string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-                using (SqlConnection conn = new SqlConnection(connStr))
-                {
-                    // fetch product details
-                    string query = @"SELECT 
+        protected void loadCart()
+        {
+            CartRepeater.DataSource = null;
+            CartRepeater.DataBind();
+
+            List<Product> fetchedProducts = new List<Product>();
+
+            string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                // fetch product details
+                string query = @"SELECT 
                         Cart.GameProductId,
                         Cart.UserId,
                         GameProduct.gameID,
@@ -50,35 +59,37 @@ namespace OMOSHIRO.Views.Dashboard.UC
                         INNER JOIN Cart
                         ON GameProduct.gameID = Cart.GameProductId
                         WHERE Cart.UserId = @userId;";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@userId", Convert.ToInt32(Session["LoggedUserId"]));
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@userId", Convert.ToInt32(Session["LoggedUserId"]));
 
-                    conn.Open();
-                    SqlDataReader reader = cmd.ExecuteReader();
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
 
-                    while (reader.Read())
+                while (reader.Read())
+                {
+                    fetchedProducts.Add(new Product
                     {
-                        fetchedProducts.Add(new Product
-                        {
-                            GameId = Convert.ToInt32(reader["gameID"]),
-                            Title = reader["gameTitle"].ToString(),
-                            Price = Convert.ToDecimal(reader["gamePrice"]),
-                            Image = reader["gameDirectory"].ToString() + reader["gameThumbnail"].ToString(),
-                            Description = reader["gameDesc"].ToString(),
-                            Requirement = reader["gameReq"].ToString(),
-                            Category = reader["gameCategory"].ToString()
-                        });
+                        GameId = Convert.ToInt32(reader["gameID"]),
+                        Title = reader["gameTitle"].ToString(),
+                        Price = Convert.ToDecimal(reader["gamePrice"]),
+                        Image = reader["gameDirectory"].ToString() + reader["gameThumbnail"].ToString(),
+                        Description = reader["gameDesc"].ToString(),
+                        Requirement = reader["gameReq"].ToString(),
+                        Category = reader["gameCategory"].ToString()
+                    });
 
-                        addPrice(Convert.ToDecimal(reader["gamePrice"]));
+                    addPrice(Convert.ToDecimal(reader["gamePrice"]));
 
-                        CartRepeater.DataSource = fetchedProducts;
-                        CartRepeater.DataBind();
-                    }
-                    conn.Close();
+                    CartRepeater.DataSource = fetchedProducts;
+                    CartRepeater.DataBind();
                 }
 
-                updateTotalAmount();
+                Session["IsCartEmpty"] = fetchedProducts.Count == 0 ? "1" : "0";
+
+                conn.Close();
             }
+
+            updateTotalAmount();
         }
 
         private void addPrice(decimal price)
@@ -90,13 +101,37 @@ namespace OMOSHIRO.Views.Dashboard.UC
         {
             if (Page is Cart)
             {
-                ((Cart)Page).updateTotalAmount(totalAmount);
+                bool isCartEmpty = Session["IsCartEmpty"] != null && Session["IsCartEmpty"].ToString() == "1";
+                ((Cart)Page).updateTotalAmount(totalAmount, isCartEmpty);
             }
         }
 
-        protected void RemoveFromCart_Click(object sender, EventArgs e)
+        protected void RemoveFromCart_Click(object sender, CommandEventArgs e)
         {
+            string gameId = e.CommandArgument.ToString();
+            try
+            {
+                string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    // delete from cart
+                    string query = @"DELETE FROM Cart WHERE UserId = @userId AND GameProductId = @gameProductId;";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@userId", Convert.ToInt32(Session["LoggedUserId"]));
+                    cmd.Parameters.AddWithValue("@gameProductId", gameId);
 
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                    loadCart();
+                }
+
+            }
+            catch (Exception exception)
+            {
+                errorMessage.Text = "Error removing item from cart: " + exception.Message;
+            }
         }
     }
 }
