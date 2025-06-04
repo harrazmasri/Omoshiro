@@ -19,7 +19,8 @@
 
     <div class="w-full h-[2px] bg-slate-700 rounded my-5"></div>
 
-    <div class="w-full flex justify-center">
+    <div class="w-full flex flex-col items-center justify-center">
         <asp:HyperLink ID="HyperLink1" CssClass="inputLabel" NavigateUrl="~/Views/Authentication/Register.aspx" runat="server">Haven't registered? Click here</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink2" CssClass="inputLabel opacity-75" NavigateUrl="~/Views/Admin/AdminLogIn.aspx" runat="server">Are you an administrator? Click here</asp:HyperLink>
     </div>
 </asp:Content>

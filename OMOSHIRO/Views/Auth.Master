@@ -20,9 +20,9 @@
         
             <div class="w-full h-full relative z-10 flex flex-col">
                 <div class="h-[33vh] pb-5 flex items-end justify-center">
-                    <div class="relative w-[200px] h-[200px] flex items-center justify-center">
-                        <div class="absolute w-[200px] h-[200px] z-0 bg-purple-900 rounded-full blur-[40px]"></div>
-                        <asp:Image ID="Image2" ImageUrl="~/Public/logo.png" CssClass="w-[150px] h-[150px] relative z-10" runat="server" />
+                    <div class="relative w-[20vh] h-[20vh] flex items-center justify-center">
+                        <div class="absolute w-[20vh] h-[20vh] z-0 bg-purple-900 rounded-full blur-[40px]"></div>
+                        <asp:Image ID="Image2" ImageUrl="~/Public/logo.png" CssClass="w-[15vh] h-[15vh] relative z-10" runat="server" />
                     </div>
                 </div>
 

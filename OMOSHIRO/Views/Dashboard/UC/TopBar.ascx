@@ -17,7 +17,7 @@
                 </p>
                 <p class="flex items-center gap-2">
                     <asp:Image ID="Image4" ImageUrl="~/Public/Icon/log-out.svg" CssClass="w-[15px] invert" runat="server" />
-                    <asp:HyperLink ID="HyperLink4" CssClass="inputLabel hover:brightness-75" NavigateUrl="~/Views/Authentication/Login.aspx" runat="server">Log Out</asp:HyperLink>
+                    <asp:Button CssClass="inputLabel hover:brightness-75" OnClick="Logout_Click" ID="Logout" runat="server" Text="Log Out" />
                 </p>
             </div>
         </div>

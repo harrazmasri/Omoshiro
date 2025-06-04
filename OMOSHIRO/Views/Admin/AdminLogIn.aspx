@@ -17,4 +17,8 @@
     <asp:Button ID="LoginButton" OnClick="LoginButton_Click" runat="server" Text="Login" CssClass="w-full mt-4 hover:cursor-pointer label rounded outline-none border-none ring-0 bg-slate-700 hover:bg-purple-700 transition py-2 px-4" />
 
     <div class="w-full h-[2px] bg-slate-700 rounded my-5"></div>
+
+     <div class="w-full flex flex-col items-center justify-center">
+         <asp:HyperLink ID="HyperLink1" CssClass="inputLabel" NavigateUrl="~/Views/Authentication/Login.aspx" runat="server">Back to customer portal, click here</asp:HyperLink>
+     </div>
 </asp:Content>

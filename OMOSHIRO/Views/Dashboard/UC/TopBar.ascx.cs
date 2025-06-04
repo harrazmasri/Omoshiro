@@ -20,15 +20,6 @@ namespace OMOSHIRO.Views.Dashboard.UC
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-            //User currentUser = Session["LoggedUser"] as User;
-            //if (currentUser != null)
-            //{
-            //    UserName.Text = currentUser.Username;
-            //}
-            //else
-            //{
-            //    UserName.Text = "Guest";
-            //}
 
             User loggedUser = new User()
             {
@@ -40,5 +31,14 @@ namespace OMOSHIRO.Views.Dashboard.UC
 
             UserName.Text = loggedUser.Username;
         }
-	}
+
+        protected void Logout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Session.RemoveAll();
+            Response.Cookies.Clear();
+            Response.Redirect("~/Views/Authentication/Login.aspx", false);
+        }
+    }
 }

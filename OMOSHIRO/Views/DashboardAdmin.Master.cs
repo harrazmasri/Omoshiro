@@ -11,7 +11,21 @@ namespace OMOSHIRO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (
+                Session["LoggedUsername"] == null
+            )
+            {
+                Response.Redirect("~/Views/Authentication/Login.aspx");
+            }
+        }
 
+        protected void Logout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Session.RemoveAll();
+            Response.Cookies.Clear();
+            Response.Redirect("~/Views/Admin/AdminLogIn.aspx", false);
         }
     }
 }

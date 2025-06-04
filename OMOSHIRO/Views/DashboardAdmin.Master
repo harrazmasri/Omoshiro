@@ -24,7 +24,7 @@
                 </div>
                 <div class="flex gap-2 items-center mb-3">
                     <asp:Image ID="Image4" ImageUrl="~/Public/Icon/log-out.svg" CssClass="w-[14px] h-[14px] relative z-10 invert" runat="server" />
-                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Views/Admin/AdminLogIn.aspx">Log Out</asp:HyperLink>   
+                    <asp:Button OnClick="Logout_Click" ID="Logout" runat="server" Text="Log Out" />
                 </div>            
             </div>
             <div class="grow h-full max-h-screen overflow-y-scroll">
