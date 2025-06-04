@@ -102,5 +102,37 @@ namespace OMOSHIRO.Views.Dashboard
             }
 
         }
+
+        protected void ConfirmDeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    string query = @"DELETE FROM Users WHERE Id=@userId AND username=@username";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", Session["loggedUsername"]);
+                        cmd.Parameters.AddWithValue("@userId", Session["loggedUserId"]);
+
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+
+                    Session.Clear();
+                    Session.Abandon();
+                    Session.RemoveAll();
+                    Response.Cookies.Clear();
+                    Response.Redirect("~/Views/Authentication/Login.aspx", false);
+                }
+
+            } catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+        }
     }
 }

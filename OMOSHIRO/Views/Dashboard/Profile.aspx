@@ -50,8 +50,23 @@
 
                 <div class="mb-5">
                     <p class="text-slate-500 mb-2">Delete Account</p>
-                    <asp:Button CssClass="bg-red-600 hover:brightness-75 rounded py-2 px-3" ID="Button2" runat="server" Text="Click to Delete Your Account" />
+                    <asp:Button CssClass="hover:cursor-pointer bg-red-600 hover:brightness-75 rounded py-2 px-3" OnClientClick="showDeleteModal(); return false;" ID="OpenModal" runat="server" Text="Click to Delete Your Account" />
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="DeleteModal" class="hidden fixed z-20 top-0 right-0 w-screen h-screen bg-[rgba(20,20,20,.2)] flex items-center justify-center">
+        <div class="w-[400px] h-fit rounded-[10px] bg-slate-800 border border-slate-700">
+            <div class="py-4 px-6">
+                <h3 class="text-3xl">Alert</h3>
+            </div>
+            <div class="bg-slate-700 py-4 px-6">
+                <p>You are about to delete this account. You will not be able to access this account and purchased items in the future.<br/><br/> Are you sure?</p>
+            </div>
+            <div class="py-4 px-6 flex items-center justify-end gap-3 text-sm">
+                <asp:Button OnClick="ConfirmDeleteButton_Click" CssClass="hover:cursor-pointer bg-red-600 hover:brightness-75 rounded py-2 px-3" ID="ConfirmDeleteButton" runat="server" Text="Confirm" />
+                <asp:Button OnClientClick="hideDeleteModal(); return false;" CssClass="hover:cursor-pointer  bg-gray-600 hover:brightness-75 rounded py-2 px-3" ID="CancelDeleteButton" runat="server" Text="Cancel" />
             </div>
         </div>
     </div>

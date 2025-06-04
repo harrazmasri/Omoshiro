@@ -26,6 +26,9 @@
             <Scripts>
                 <asp:ScriptReference Path="~/Src/Script/tailwind.js" />
             </Scripts>
+            <Scripts>
+                <asp:ScriptReference Path="~/Src/Script/Main.js" />
+            </Scripts>
         </asp:ScriptManager>
     </form>
 </body>

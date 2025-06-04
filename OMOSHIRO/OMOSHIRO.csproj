@@ -76,6 +76,7 @@
     <Content Include="Public\Icon\plus.svg" />
     <Content Include="Public\Icon\shopping-bag.svg" />
     <Content Include="Public\Icon\trello.svg" />
+    <Content Include="Src\Script\Main.js" />
     <Content Include="Views\Admin\editproduct.aspx" />
     <Content Include="Views\Admin\AdminLogIn.aspx" />
     <Content Include="Public\Banner\banner1.jpg" />
