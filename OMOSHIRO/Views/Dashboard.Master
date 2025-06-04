@@ -17,7 +17,12 @@
             <component:TopBar runat="server" ID="TopBar" />
 
             <div class="w-full h-full">
-                <asp:ContentPlaceHolder ID="DashboardPlaceholder" runat="server"></asp:ContentPlaceHolder>
+                <div class="w-full min-h-[86vh]">
+                    <asp:ContentPlaceHolder ID="DashboardPlaceholder" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div class="w-full flex justify-center py-5">
+                    <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Views/Dashboard/AboutPage.aspx" CssClass="inputLabel text-sm text-gray-400" runat="server">About Omoshiro</asp:HyperLink>
+                </div>
             </div>
         
         </div>
