@@ -43,10 +43,31 @@
                     <component:ProfileInventory runat="server" ID="ProfileInventory"></component:ProfileInventory>
                 </div>
 
-                <!-- div class="mb-5">
-                    <p class="text-slate-500 mb-2">Reset Password</p>
-                    <asp:Button CssClass="bg-red-600 hover:brightness-75 rounded py-2 px-3" ID="Button1" runat="server" Text="Click to Reset Password" />
-                </div -->
+                <div class="mb-5">
+                    <p class="text-slate-500 mb-2">My Purchases</p>
+                    <asp:SqlDataSource ID="InvoiceDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [OrderID], [PurchasedDate], [PurchasedAmount] FROM [Invoices]">
+                    </asp:SqlDataSource>
+                    <asp:GridView ID="InvoiceGridView" CssClass="w-full rounded-[5px]" runat="server" DataSourceID="InvoiceDataSource" CellPadding="7" ForeColor="Black" GridLines="Horizontal" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" AllowPaging="True" AllowSorting="True">
+                        <Columns>
+                            <asp:HyperLinkField 
+                                NavigateUrl="~/Views/Dashboard/InvoicePage.aspx" 
+                                DataNavigateUrlFields="OrderId" 
+                                DataNavigateUrlFormatString="~/Views/Dashboard/InvoicePage.aspx?id={0}"
+                                Text="View" >
+                            <ControlStyle CssClass="p-3" />
+                            </asp:HyperLinkField>
+                        </Columns>
+                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                        <RowStyle BackColor="#0f172a" ForeColor="White" Height="20px" />
+                        <HeaderStyle BackColor="#1e293b" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                    </asp:GridView>
+                </div>
 
                 <div class="mb-5">
                     <p class="text-slate-500 mb-2">Delete Account</p>

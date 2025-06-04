@@ -24,6 +24,13 @@ namespace OMOSHIRO.Views.Dashboard
 
         }
 
+        public class Invoice
+        {
+            public int Id { get; set; }
+            public DateTime PurchasedDate { get; set; }
+            public decimal PurchasedAmount { get; set; }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
 		{
 
@@ -49,6 +56,7 @@ namespace OMOSHIRO.Views.Dashboard
 
         protected void CheckoutButton_Click(object sender, EventArgs e)
         {
+            Invoice createdInvoice = new Invoice();
             List<Product> fetchedProducts = new List<Product>();
             int loggedUserId = Convert.ToInt32(Session["loggedUserId"]);
 
@@ -104,10 +112,32 @@ namespace OMOSHIRO.Views.Dashboard
                     deleteCmd.ExecuteNonQuery();
                 }
 
-                // Step 3: Insert into Orders
+                // Step 3: Create invoice
+                string invoiceQuery = @"
+                    INSERT INTO Invoices (OrderId, PurchasedDate, PurchasedAmount, UserId)
+                    VALUES (@orderId, @purchasedDate, @purchasedAmount, @userId);
+                    SELECT SCOPE_IDENTITY();";
+
+                using (SqlCommand invoiceCmd = new SqlCommand(invoiceQuery, conn))
+                {
+                    invoiceCmd.Parameters.Clear();
+                    invoiceCmd.Parameters.AddWithValue("@orderId", "invoice_"+StringGenerator(10)+"_OMOSHIRO");
+                    invoiceCmd.Parameters.AddWithValue("@purchasedAmount", ViewState["purchasedTotalAmount"]);
+                    invoiceCmd.Parameters.AddWithValue("@userId", loggedUserId);
+                    invoiceCmd.Parameters.AddWithValue("@purchasedDate", DateTime.Now);
+
+                    createdInvoice = new Invoice
+                    {
+                        Id = Convert.ToInt32(invoiceCmd.ExecuteScalar()),
+                        PurchasedDate = DateTime.Now,
+                        PurchasedAmount = Convert.ToDecimal(ViewState["purchasedTotalAmount"])
+                    };
+                }
+
+                // Step 4: Insert into Orders
                 string insertQuery = @"
-                    INSERT INTO Orders (gameProductId, userId, purchasedDate)
-                    VALUES (@gameProductId, @userId, @purchasedDate)";
+                    INSERT INTO Orders (gameProductId, userId, purchasedDate, invoiceId)
+                    VALUES (@gameProductId, @userId, @purchasedDate, @invoiceId)";
 
                 using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
                 {
@@ -117,12 +147,13 @@ namespace OMOSHIRO.Views.Dashboard
                         insertCmd.Parameters.AddWithValue("@gameProductId", product.GameId);
                         insertCmd.Parameters.AddWithValue("@userId", loggedUserId);
                         insertCmd.Parameters.AddWithValue("@purchasedDate", DateTime.Now);
+                        insertCmd.Parameters.AddWithValue("@invoiceId", createdInvoice.Id);
 
                         insertCmd.ExecuteNonQuery();
                     }
                 }
 
-                // Step 4: Deduct balance
+                // Step 5: Deduct balance
                 string deductQuery = @"UPDATE Users SET balance = balance - @purchasedAmount WHERE Id = @userId";
 
                 using (SqlCommand deductCmd = new SqlCommand(deductQuery, conn))
@@ -139,5 +170,15 @@ namespace OMOSHIRO.Views.Dashboard
             Server.Transfer("~/Views/Dashboard/CheckoutSuccess.aspx");
         }
 
+        protected string StringGenerator(int stringlen)
+        {
+            Random rand = new Random();
+            char[] chars = new char[stringlen];
+            for (int i = 0; i < stringlen; i++)
+            {
+                chars[i] = (char)(rand.Next(0, 26) + 65);
+            }
+            return new string(chars);
+        }
     }
 }

@@ -165,6 +165,7 @@
     <Content Include="Views\Dashboard\CheckoutSuccess.aspx" />
     <Content Include="Views\Dashboard\Cart.aspx" />
     <Content Include="Views\Dashboard\Category.aspx" />
+    <Content Include="Views\Dashboard\InvoicePage.aspx" />
     <Content Include="Views\Dashboard\ProductView.aspx" />
     <Content Include="Views\Dashboard\Profile.aspx" />
     <Content Include="Views\Dashboard\Store.aspx" />
@@ -269,6 +270,13 @@
     </Compile>
     <Compile Include="Views\Dashboard\Category.aspx.designer.cs">
       <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\InvoicePage.aspx.cs">
+      <DependentUpon>InvoicePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\InvoicePage.aspx.designer.cs">
+      <DependentUpon>InvoicePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Dashboard\ProductView.aspx.cs">
       <DependentUpon>ProductView.aspx</DependentUpon>

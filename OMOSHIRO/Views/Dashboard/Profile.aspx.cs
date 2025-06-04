@@ -134,5 +134,10 @@ namespace OMOSHIRO.Views.Dashboard
                 Console.WriteLine(exception.Message);
             }
         }
+
+        protected void InvoiceGridView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
