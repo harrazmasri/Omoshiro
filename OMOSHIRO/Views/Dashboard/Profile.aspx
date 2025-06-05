@@ -45,7 +45,10 @@
 
                 <div class="mb-5">
                     <p class="text-slate-500 mb-2">My Purchases</p>
-                    <asp:SqlDataSource ID="InvoiceDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [OrderID], [PurchasedDate], [PurchasedAmount] FROM [Invoices]">
+                    <asp:SqlDataSource ID="InvoiceDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [OrderID], [PurchasedDate], [PurchasedAmount] FROM [Invoices] WHERE ([UserId] = @UserId)">
+                        <SelectParameters>
+                            <asp:SessionParameter Name="UserId" SessionField="LoggedUserId" Type="Int32" />
+                        </SelectParameters>
                     </asp:SqlDataSource>
                     <asp:GridView ID="InvoiceGridView" CssClass="w-full rounded-[5px]" runat="server" DataSourceID="InvoiceDataSource" CellPadding="7" ForeColor="Black" GridLines="Horizontal" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" AllowPaging="True" AllowSorting="True">
                         <Columns>
