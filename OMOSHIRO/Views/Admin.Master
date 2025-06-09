@@ -14,16 +14,11 @@
 <body>
     <form id="form1" runat="server">
     <div class="w-screen h-screen flex items-center justify-center">
-        <div class="w-full absolute top-0 z-0">
-            <div class="w-full aspect-[1919/617] bg-linear-to-t from-slate-900 to-white/0 absolute top-0"></div>
-            <asp:Image ID="Image1" runat="server" ImageUrl="~/Public/auth_bg.png" CssClass="w-full" />
-        </div>
-    
         <div class="w-full h-full relative z-10 flex flex-col">
             <div class="h-[33vh] pb-5 flex items-end justify-center">
-                <div class="relative w-[200px] h-[200px] flex items-center justify-center">
-                    <div class="absolute w-[200px] h-[200px] z-0 bg-purple-900 rounded-full blur-[40px]"></div>
-                    <asp:Image ID="Image2" ImageUrl="~/Public/logo.png" CssClass="w-[150px] h-[150px] relative z-10" runat="server" />
+                <div class="relative w-[20vh] h-[20vh] flex items-center justify-center">
+                    <div class="absolute w-[20vh] h-[20vh] z-0 bg-gray-700 rounded-full blur-[30px]"></div>
+                    <asp:Image ID="Image2" ImageUrl="~/Public/logo.png" CssClass="w-[15vh] h-[15vh] relative z-10" runat="server" />
                 </div>
             </div>
 

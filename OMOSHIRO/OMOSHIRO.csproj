@@ -67,14 +67,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\OmoshiroDB.mdf" />
+    <Content Include="App_Data\OmoshiroDB_log.ldf">
+      <DependentUpon>OmoshiroDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Public\About\reception.png" />
+    <Content Include="Public\About\crowdstrike.png" />
+    <Content Include="Public\About\lenovo.png" />
+    <Content Include="Public\About\logitech.png" />
+    <Content Include="Public\About\maybank.png" />
+    <Content Include="Public\About\Office.png" />
+    <Content Include="Public\About\founder.png" />
+    <Content Include="Public\Icon\check.svg" />
     <Content Include="Public\Icon\lucide--gamepad-2.svg" />
+    <Content Include="Public\Icon\plus.svg" />
+    <Content Include="Public\Icon\shopping-bag.svg" />
     <Content Include="Public\Icon\trello.svg" />
+    <Content Include="Src\Script\Main.js" />
+    <Content Include="Views\Admin\editproduct.aspx" />
     <Content Include="Views\Admin\AdminLogIn.aspx" />
     <Content Include="Public\Banner\banner1.jpg" />
     <Content Include="Public\Banner\banner2.jpg" />
     <Content Include="Public\Icon\log-out.svg" />
     <Content Include="Public\Icon\shopping-cart.svg" />
     <Content Include="Public\Icon\user.svg" />
+    <Content Include="Public\Icon\x.svg" />
     <Content Include="Public\logo.png" />
     <Content Include="Public\auth_bg.png" />
     <Content Include="Public\logoMascot.png" />
@@ -136,36 +153,79 @@
     <Content Include="Public\TestProducts\header_alt_assets_3.jpg" />
     <Content Include="Public\TestProducts\header_alt_assets_4.jpg" />
     <Content Include="Public\TestProducts\header_alt_assets_6.jpg" />
+    <Content Include="Public\TestProducts\test_preview\1.jpg" />
+    <Content Include="Public\TestProducts\test_preview\2.jpg" />
+    <Content Include="Public\TestProducts\test_preview\3.jpg" />
     <Content Include="Src\Script\tailwind.js" />
     <Content Include="Src\Style\Styling.css" />
+    <Content Include="Views\Admin\ProductTable.aspx" />
     <Content Include="Views\Authentication\Login.aspx" />
     <Content Include="Views\Authentication\Register.aspx" />
+    <Content Include="Views\Dashboard\AboutPage.aspx" />
+    <Content Include="Views\Dashboard\CheckoutSuccess.aspx" />
+    <Content Include="Views\Dashboard\Cart.aspx" />
     <Content Include="Views\Dashboard\Category.aspx" />
+    <Content Include="Views\Dashboard\InvoicePage.aspx" />
+    <Content Include="Views\Dashboard\ProductView.aspx" />
+    <Content Include="Views\Dashboard\Profile.aspx" />
     <Content Include="Views\Dashboard\Store.aspx" />
+    <Content Include="Views\Dashboard\TopUpWallet.aspx" />
+    <Content Include="Views\Dashboard\UC\CartList.ascx" />
+    <Content Include="Views\Dashboard\UC\CategoryGrid.ascx" />
     <Content Include="Views\Dashboard\UC\Featured.ascx" />
     <Content Include="Views\Dashboard\UC\GridLayout.ascx" />
+    <Content Include="Views\Dashboard\UC\ProfileInventory.ascx" />
     <Content Include="Views\Dashboard\UC\RackLayout.ascx" />
     <Content Include="Views\Dashboard\UC\TopBar.ascx" />
+    <Content Include="Views\Admin\addproduct.aspx" />
     <Content Include="Web.config" />
     <Content Include="Views\Admin\DashboardAdmin.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\Admin\editproduct.aspx.cs">
+      <DependentUpon>editproduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\editproduct.aspx.designer.cs">
+      <DependentUpon>editproduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\AdminLogIn.aspx.cs">
       <DependentUpon>AdminLogIn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Admin\AdminLogIn.aspx.designer.cs">
       <DependentUpon>AdminLogIn.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\DasgboardAdmin.Master.cs">
-      <DependentUpon>DasgboardAdmin.Master</DependentUpon>
+    <Compile Include="Views\Admin\ProductTable.aspx.cs">
+      <DependentUpon>ProductTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\DasgboardAdmin.Master.designer.cs">
-      <DependentUpon>DasgboardAdmin.Master</DependentUpon>
+    <Compile Include="Views\Admin\ProductTable.aspx.designer.cs">
+      <DependentUpon>ProductTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\AboutPage.aspx.cs">
+      <DependentUpon>AboutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\AboutPage.aspx.designer.cs">
+      <DependentUpon>AboutPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\CheckoutSuccess.aspx.cs">
+      <DependentUpon>CheckoutSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\CheckoutSuccess.aspx.designer.cs">
+      <DependentUpon>CheckoutSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashboardAdmin.Master.cs">
+      <DependentUpon>DashboardAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DashboardAdmin.Master.designer.cs">
+      <DependentUpon>DashboardAdmin.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
@@ -179,7 +239,6 @@
     </Compile>
     <Compile Include="Views\Authentication\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Authentication\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -198,6 +257,13 @@
     <Compile Include="Views\Dashboard.Master.designer.cs">
       <DependentUpon>Dashboard.Master</DependentUpon>
     </Compile>
+    <Compile Include="Views\Dashboard\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dashboard\Category.aspx.cs">
       <DependentUpon>Category.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -205,12 +271,52 @@
     <Compile Include="Views\Dashboard\Category.aspx.designer.cs">
       <DependentUpon>Category.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Dashboard\InvoicePage.aspx.cs">
+      <DependentUpon>InvoicePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\InvoicePage.aspx.designer.cs">
+      <DependentUpon>InvoicePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\ProductView.aspx.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\ProductView.aspx.designer.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dashboard\Store.aspx.cs">
       <DependentUpon>Store.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Dashboard\Store.aspx.designer.cs">
       <DependentUpon>Store.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\TopUpWallet.aspx.cs">
+      <DependentUpon>TopUpWallet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\TopUpWallet.aspx.designer.cs">
+      <DependentUpon>TopUpWallet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\CartList.ascx.cs">
+      <DependentUpon>CartList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\CartList.ascx.designer.cs">
+      <DependentUpon>CartList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\CategoryGrid.ascx.cs">
+      <DependentUpon>CategoryGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\CategoryGrid.ascx.designer.cs">
+      <DependentUpon>CategoryGrid.ascx</DependentUpon>
     </Compile>
     <Compile Include="Views\Dashboard\UC\Featured.ascx.cs">
       <DependentUpon>Featured.ascx</DependentUpon>
@@ -221,10 +327,16 @@
     </Compile>
     <Compile Include="Views\Dashboard\UC\GridLayout.ascx.cs">
       <DependentUpon>GridLayout.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Dashboard\UC\GridLayout.ascx.designer.cs">
       <DependentUpon>GridLayout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\ProfileInventory.ascx.cs">
+      <DependentUpon>ProfileInventory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\UC\ProfileInventory.ascx.designer.cs">
+      <DependentUpon>ProfileInventory.ascx</DependentUpon>
     </Compile>
     <Compile Include="Views\Dashboard\UC\RackLayout.ascx.cs">
       <DependentUpon>RackLayout.ascx</DependentUpon>
@@ -235,7 +347,6 @@
     </Compile>
     <Compile Include="Views\Dashboard\UC\TopBar.ascx.cs">
       <DependentUpon>TopBar.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Dashboard\UC\TopBar.ascx.designer.cs">
       <DependentUpon>TopBar.ascx</DependentUpon>
@@ -247,9 +358,16 @@
     <Compile Include="Views\Admin\DashboardAdmin.aspx.designer.cs">
       <DependentUpon>DashboardAdmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\addproduct.aspx.cs">
+      <DependentUpon>addproduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\addproduct.aspx.designer.cs">
+      <DependentUpon>addproduct.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\DasgboardAdmin.Master" />
+    <Content Include="Views\DashboardAdmin.Master" />
     <None Include="packages.config" />
     <Content Include="Views\Dashboard.Master" />
     <Content Include="Views\Auth.Master" />
@@ -262,11 +380,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Public\Products\" />
     <Folder Include="Src\Font\" />
-    <Folder Include="Views\Cart\" />
-    <Folder Include="Views\Product\" />
-    <Folder Include="Views\Profile\" />
+    <Folder Include="Storage\Images\Gallery\" />
+    <Folder Include="Storage\Images\Thumbnails\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
