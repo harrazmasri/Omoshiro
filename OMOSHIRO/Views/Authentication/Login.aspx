@@ -10,10 +10,16 @@
     <div class="mb-1 rounded bg-slate-800 py-2 px-4">
         <p class="inputLabel">Username</p>
         <asp:TextBox ID="UserName" runat="server" CssClass="w-full rounded text-[1rem] outline-none border-none bg-slate-800 ring-0"></asp:TextBox>
+        <p class="text-[11px] text-red-500">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="UserName" runat="server" ErrorMessage="Username is required."></asp:RequiredFieldValidator>
+        </p>
     </div>
     <div class="mb-1 rounded bg-slate-800 py-2 px-4">
         <p class="inputLabel">Password</p>
         <asp:TextBox ID="Password" TextMode="Password" runat="server" CssClass="w-full rounded text-[1rem] outline-none border-none bg-slate-800 ring-0"></asp:TextBox>
+        <p class="text-[11px] text-red-500">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="Password" runat="server" ErrorMessage="Password is required."></asp:RequiredFieldValidator>
+        </p>
     </div>
     <asp:Button ID="RegisterButton" OnClick="RegisterButton_Click" runat="server" Text="Login" CssClass="w-full mt-4 hover:cursor-pointer label rounded outline-none border-none ring-0 bg-slate-700 hover:bg-purple-700 transition py-2 px-4" />
 

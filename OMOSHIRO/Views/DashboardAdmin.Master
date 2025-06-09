@@ -27,7 +27,7 @@
                     <asp:Button OnClick="Logout_Click" ID="Logout" runat="server" Text="Log Out" />
                 </div>            
             </div>
-            <div class="grow h-full max-h-screen overflow-y-scroll">
+            <div class="w-full flex justify-center py-5">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>

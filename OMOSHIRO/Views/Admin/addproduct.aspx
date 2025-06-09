@@ -18,21 +18,33 @@
     <div class="mb-4">
         <asp:Label AssociatedControlID="txtTitle" runat="server" Text="Game Title" CssClass="block text-white mb-1" />
         <asp:TextBox ID="txtTitle" runat="server" CssClass="w-full px-3 py-2 rounded bg-gray-800 text-white border border-gray-600" />
+        <p class="text-[11px] text-red-500">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtTitle" runat="server" ErrorMessage="Title is required."></asp:RequiredFieldValidator>
+        </p>
     </div>
 
     <div class="mb-4">
         <asp:Label AssociatedControlID="txtPrice" runat="server" Text="Game Price (RM)" CssClass="block text-white mb-1" />
         <asp:TextBox ID="txtPrice" runat="server" CssClass="w-full px-3 py-2 rounded bg-gray-800 text-white border border-gray-600" />
+        <p class="text-[11px] text-red-500">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtPrice" runat="server" ErrorMessage="Price is required."></asp:RequiredFieldValidator>
+        </p>
     </div>
 
     <div class="mb-4">
         <asp:Label AssociatedControlID="txtDesc" runat="server" Text="Game Description" CssClass="block text-white mb-1" />
         <asp:TextBox ID="txtDesc" runat="server" TextMode="MultiLine" Rows="3" CssClass="w-full px-3 py-2 rounded bg-gray-800 text-white border border-gray-600" />
+        <p class="text-[11px] text-red-500">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtDesc" runat="server" ErrorMessage="Description is required."></asp:RequiredFieldValidator>
+        </p>
     </div>
 
     <div class="mb-4">
         <asp:Label AssociatedControlID="txtReq" runat="server" Text="Game Requirements" CssClass="block text-white mb-1" />
         <asp:TextBox ID="txtReq" runat="server" TextMode="MultiLine" Rows="3" CssClass="w-full px-3 py-2 rounded bg-gray-800 text-white border border-gray-600" />
+        <p class="text-[11px] text-red-500">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtReq" runat="server" ErrorMessage="Requirements is required."></asp:RequiredFieldValidator>
+        </p>
     </div>
 
     <div class="mb-4">
@@ -86,6 +98,9 @@
             <asp:ListItem Text="Sports Sim" Value="sports_sim" />
             <asp:ListItem Text="Team Sports" Value="team_sports" />
         </asp:ListBox>
+        <p class="text-[11px] text-red-500">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="GenreListBox" runat="server" ErrorMessage="Category is required."></asp:RequiredFieldValidator>
+        </p>
     </div>
 
     <div class="mb-4">
