@@ -37,6 +37,8 @@
         <asp:ScriptReference Path="~/Src/Script/tailwind.js" />
     </Scripts>
 </asp:ScriptManager>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </form>
 
 </body>

@@ -10,9 +10,12 @@
 
         <asp:TextBox ID="UserName" runat="server" CssClass="w-full rounded text-[1rem] outline-none border-none bg-slate-800 ring-0"></asp:TextBox>
     </div>
+
     <div class="mb-1 rounded bg-slate-800 py-2 px-4">
-        <p class="inputLabel">Password</p>
-        <asp:TextBox ID="Password" runat="server" CssClass="w-full rounded text-[1rem] outline-none border-none bg-slate-800 ring-0"></asp:TextBox>
+        <p class="inputLabel text-white">Password</p>
+        <asp:TextBox ID="Password" runat="server" 
+            TextMode="Password" 
+            CssClass="w-full rounded text-[1rem] outline-none border-none bg-slate-800 ring-0 text-white" />
     </div>
     <asp:Button ID="LoginButton" OnClick="LoginButton_Click" runat="server" Text="Login" CssClass="w-full mt-4 hover:cursor-pointer label rounded outline-none border-none ring-0 bg-slate-700 hover:bg-purple-700 transition py-2 px-4" />
 

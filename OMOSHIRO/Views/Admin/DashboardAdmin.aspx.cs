@@ -13,5 +13,14 @@ namespace OMOSHIRO
         {
 
         }
+
+        protected void LogoutButton_Click(object sender, EventArgs e)
+        {
+            // Optional: Clear session or authentication data here
+            // Session.Abandon();
+
+            // Redirect to the admin login page
+            Response.Redirect("~/Views/Admin/AdminLogIn.aspx");
+        }
     }
 }
